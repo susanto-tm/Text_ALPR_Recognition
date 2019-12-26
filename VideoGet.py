@@ -4,7 +4,7 @@ import cv2 as cv
 
 class VideoGet:
     def __init__(self, src=0):
-        self.stream = cv.VideoCapture(src)
+        self.stream = cv.VideoCapture(src + cv.CAP_DSHOW)
         self.grabbed, self.frame = self.stream.read()
         self.stopped = False
 
